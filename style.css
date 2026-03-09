@@ -1,0 +1,387 @@
+/* =======================
+   RESET & GLOBAL
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.7;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: linear-gradient(90deg, #000000, #b30000);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff1a1a;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+/* HERO TEXT FIXED */
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd700;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+}
+
+/* =======================
+   CONTENT
+======================= */
+.content {
+    padding: 60px 15%;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b30000;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+/* =======================
+   MENU
+======================= */
+.menu-section {
+    padding: 60px 10%;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #b30000;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    padding-bottom: 15px;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 15px 10px 5px 10px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* =======================
+   FORM
+======================= */
+form {
+    margin-top: 30px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 12px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px 30px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff1a1a;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* =======================
+   RESPONSIVE FIX
+======================= */
+@media (max-width: 768px) {
+    .content {
+        padding: 40px 8%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+}
+/* =======================
+   NAVBAR UPGRADE
+======================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 5px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Garis animasi */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #ff1a1a;
+    transition: width 0.3s ease;
+}
+
+/* Saat hover */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hover text effect */
+nav a:hover {
+    color: #ff4d4d;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #ff1a1a;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/* =======================
+   NAVBAR SLIDING INDICATOR
+======================= */
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff4d4d;
+}
+
+/* Garis merah */
+.nav-indicator {
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: #ff1a1a;
+    transition: all 0.35s ease;
+}
+/* =======================
+   HEADER FLEX LAYOUT
+======================= */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: linear-gradient(90deg, #000000, #b30000);
+    color: white;
+    flex-wrap: wrap;
+}
+
+/* Logo + Title */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    width: 55px;       /* ukuran logo */
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%; /* kalau mau bulat */
+}
+
+.logo-area h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+
+}
+.about-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text{
+    flex: 2;
+}
+
+.about-image{
+    flex: 1;
+}
+
+.about-image img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* card khusus signature */
+.signature-menu {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    padding-bottom: 15px;
+
+    grid-column: span 2; /* bikin lebih besar */
+}
+
+.signature-menu:hover {
+    transform: translateY(-6px);
+}
+
+.signature-menu img {
+    width: 100%;
+    height: 250px; /* gambar lebih tinggi */
+    object-fit: cover;
+}
+
+.signature-menu h3 {
+    padding: 20px 10px 10px 10px;
+    font-size: 1.4rem; /* teks lebih besar */
+    text-align: center;
+}
